@@ -1,18 +1,15 @@
 require 'cuba'
 require 'cuba/render'
+Cuba.plugin Cuba::Render
 
 Cuba.define do
 	on root do
 		on param('txtweb-message') do |msg|
-			res.headers['textweb-appkey']='c6775e48-8dd9-4a22-b927-408db2761b58'
-			res.write "#{msg} recieved at RubyKitchen"
-			res.write "
-			"
+			res.write render('response.html.erb',data:msg)
 		end
 
 		on default do
-			res.write "<meta name='textweb-appkey' content='c6775e48-8dd9-4a22-b927-408db2761b58' />"
-			res.write "test"
+			res.write render('response.html.erb',data:"data")
 		end
 	end
 end
