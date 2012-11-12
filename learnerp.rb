@@ -3,6 +3,8 @@ require 'cuba/render'
 
 Cuba.define do
 	on root do
-		res.write "wasu"
+		on params('txtweb-message') do |msg|
+			res.write "wasu"
+		end
 	end
 end
