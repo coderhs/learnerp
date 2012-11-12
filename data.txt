@@ -1,0 +1,8 @@
+SAAS,software as a service
+LWP, leave without pay
+HRA, House Rent Allowance
+PF, providant fund
+ESI, Employee State Insurance
+PTax,Proffesional Tax
+HR, Human Resources
+DA, Dearness Allowance
