@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title> LearnERP! </title>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	</head>
+	<body>
+		<table>
+			<tr><th> Key</th><th> Value </th></tr>
+		<% data.each do |item| %>		
+			<tr>
+				<td><%= item[:key] %> </td>
+				<td><%= item[:value] %></td>
+			</tr>
+			<% end %>
+		</table>
+	</body>
+</html>
