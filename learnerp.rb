@@ -19,11 +19,11 @@ Cuba.define do
 			dataset.each do |item|
 				data = item[:value]
 			end
-			res.write render('response.html.erb',data:data)
+			res.write render('view/response.html.erb',data:data)
 		end
 
 		on default do
-			res.write render('response.html.erb',data:"data")
+			res.write render('view/response.html.erb',data:"data")
 		end
 	end
 
@@ -36,13 +36,13 @@ Cuba.define do
 			end
 		end
 		on default do
-			res.write render('submit_form.html.erb')
+			res.write render('view/submit_form.html.erb')
 		end
 	end
 
 	on "insert" do
 		on get do
-			res.write render('insert.html.erb')
+			res.write render('view/insert.html.erb')
 		end
 		on post do
 			on param('key'),param('value') do |key,value|
@@ -55,7 +55,7 @@ Cuba.define do
 	on "view" do
 		on get do
 			items = DB[:items]
-			res.write render('view.html.erb',data:items)
+			res.write render('view/view.html.erb',data:items)
 		end
 	end
 end
