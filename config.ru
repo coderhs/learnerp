@@ -1,0 +1,2 @@
+require './learnerp'
+run Cuba
