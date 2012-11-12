@@ -10,6 +10,7 @@ Cuba.define do
 		end
 
 		on default do
+			res.write "<meta name='textweb-appkey' content='c6775e48-8dd9-4a22-b927-408db2761b58' />"
 			res.write "test"
 		end
 	end
