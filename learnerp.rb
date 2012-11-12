@@ -4,7 +4,7 @@ require 'cuba/render'
 Cuba.define do
 	on root do
 		on param('txtweb-message') do |msg|
-			res.write "<meta name='textweb-appkey' content='c6775e48-8dd9-4a22-b927-408db2761b58' />"
+			res.headers['textweb-appkey']='c6775e48-8dd9-4a22-b927-408db2761b58'
 			res.write "#{msg} recieved at RubyKitchen"
 			res.write "
 			"
