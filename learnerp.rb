@@ -19,6 +19,9 @@ Cuba.define do
 			dataset.each do |item|
 				data = item[:value]
 			end
+			if data == "Not present in DB" then
+				DB[:unknown].insert(:key => msg.downcase)
+			end
 			res.write render('view/response.html.erb',data:data)
 		end
 
