@@ -1,5 +1,5 @@
 require 'sequel'
-DB = Sequel.connect('sqlite://data.db')
+DB = Sequel.connect('sqlite://db/data.db')
 
 DB.create_table :items do
 	primary_id :id
