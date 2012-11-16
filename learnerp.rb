@@ -8,7 +8,7 @@ Cuba.use Rack::Static,
 root: "./",
 urls: ["/assets"]
 
-DB = Sequel.connect("sqlite://data.db")
+DB = Sequel.connect("sqlite://db/data.db")
 items = DB[:items]
 
 Cuba.define do

@@ -15,7 +15,7 @@ key,value
 =end
 
 require 'sequel'
-DB = Sequel.connect("sqlite://data.db")
+DB = Sequel.connect("sqlite://db/data.db")
 items = DB[:items]
 if ARGV[0].nil? then
 	puts "NO FILE ENTERED \n\n "
