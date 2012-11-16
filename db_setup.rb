@@ -6,3 +6,8 @@ DB.create_table :items do
 	String  :key
 	String :value
 end
+
+DB.create_table :unknown do
+	primary_id :id
+	String :key
+end
