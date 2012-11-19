@@ -57,8 +57,22 @@ Cuba.define do
 
 	on "view" do
 		on get do
-			items = DB[:items]
-			res.write render('view/view.html.erb',data:items)
+			on param("val") do |val|
+				data = " "
+				if val == "db" then
+					data = DB[:items]
+					res.write render('view/view.html.erb',data:data)
+				elsif val == "unknown" then
+					data = DB[:unknown]
+					res.write render('view/unknown.html.erb',data:data)
+				else
+					res.redirect 'view'
+				end					
+				
+			end
+			on default do
+				res.write "view?val=db/unknown"
+			end
 		end
 	end
 end
