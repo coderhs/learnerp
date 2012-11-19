@@ -15,11 +15,11 @@ Cuba.define do
 	on root do
 		on param('txtweb-message') do |msg|
 			dataset = items.where(:key => msg.downcase)
-			data = "Not present in DB"
+			data = "Meaning not available, V hav send our MBA bots to find this term"
 			dataset.each do |item|
 				data = item[:value]
 			end
-			if data == "Not present in DB" then
+			if data == "Meaning not available, V hav send our MBA bots to find this term" then
 				DB[:unknown].insert(:key => msg.downcase)
 			end
 			res.write render('view/response.html.erb',data:data)
